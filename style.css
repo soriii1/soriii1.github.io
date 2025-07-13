@@ -1,0 +1,98 @@
+body{
+  font-family: sans-serif;
+  text-align: center;
+
+}
+
+p{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.home{
+  margin-top: 10%;
+  text-align: center;
+}
+
+.button{
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f0f0f0;
+  background-image: linear-gradient(to left, #c6ea4e,#a2c751);
+  border-radius: 20px;
+  padding: 10px;
+  width: 130px;
+}
+
+
+
+.game_board{
+  max-width: 700px;
+  margin: 60px auto 0;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(70px, 100px));
+  gap: 20px;
+  padding: 0 10px;
+  
+}
+
+.card{
+  position: relative;
+  width: 100px;
+  height: 150px;
+  transition: all .4s;
+  text-align: center;
+  transform-style: preserve-3d;
+  background-color: none;
+  display: block;
+  perspective: 1000px;
+ 
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(227, 22, 22, 0.15);
+}
+
+.card.flip .inner{
+  transform: rotateY(180deg);
+}
+
+.inner{
+  width: 100px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transition: transform .4s;
+  position: relative;
+}
+
+.front{
+  width: 100px;
+  height: 150px;
+  border: 1px solid #F36161;
+  
+  border-radius: 5px;
+  transform: rotateY(180deg);
+}
+
+.back{
+  width: 100px;
+  height: 150px;
+  background-image: linear-gradient(to top, #e14e55,#F36161);
+  border-radius: 5px;
+}
+
+.front, .back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-align: center;
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+
